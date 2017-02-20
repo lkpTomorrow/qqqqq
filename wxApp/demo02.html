@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+		<script>
+			$(function(){
+				getDate();
+			})
+			function getDate(){
+				$.ajax({
+					type:"get",
+					dataType:"jsonp",
+					url:"https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=kvTK8HK_C1WbPomNuUiFsPmTA8xqnmFUEJEbQxWHVjIoOZkHeh1pM-0q8amwtebdU2Q5mlbA4b_aQT8RlfHAqr_24SGMgUoAs67nB4qwUQtrbWaXs5BailA0ZlGB4gWtUKCcADAQGY&type=jsapi",
+					async:true,
+					success:function(data){
+						console.log(data);
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
